@@ -1,0 +1,53 @@
+:root { color-scheme: light; --ink: #233b39; --muted: #62716a; --green: #285c4d; --paper: #f6f5ef; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+.page { max-width: 1280px; margin: auto; padding: 32px 48px; }
+a { color: var(--green); text-underline-offset: 4px; }
+.back { font-size: 13px; }
+header { padding-bottom: 32px; }
+.eyebrow { font-size: 11px; font-weight: 650; letter-spacing: .16em; margin: 32px 0 14px; }
+h1 { font-family: Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.8vw, 62px); letter-spacing: -.04em; margin: 0 0 16px; line-height: 1.1; }
+h1 em { color: var(--green); font-weight: 400; }
+.intro { max-width: 610px; font-size: 15px; line-height: 1.7; color: var(--muted); margin: 0; }
+.explorer { display: grid; grid-template-columns: minmax(0, 1fr) 320px; border: 1px solid #d9dfd6; border-radius: 18px; overflow: hidden; background: #fffef9; }
+.map-panel { padding: 24px; background: #eaf0e9; min-width: 0; }
+.map-heading { display: flex; justify-content: space-between; font-size: 10px; letter-spacing: .13em; font-weight: 650; color: #506c60; }
+#map { width: 100%; min-height: 300px; aspect-ratio: 1; display: grid; align-items: center; }
+#map svg { display: block; width: 100%; height: auto; overflow: visible; }
+#map .prefecture { fill: #b4cbb4; stroke: #f7faf3; stroke-width: 1.5; cursor: pointer; transition: fill .15s; }
+#map .prefecture:hover, #map .prefecture:focus-visible { fill: #6a9476; outline: none; stroke: #214c3e; stroke-width: 2.5; }
+#map .prefecture[aria-pressed="true"] { fill: #285c4d; stroke: #173e31; stroke-width: 2; }
+#map .boundary-line { stroke: #91aa9b; }
+.map-hint { text-align: center; font-size: 12px; color: #506c60; margin: 4px 0; }
+.loading { text-align: center; color: var(--muted); padding: 24px; }
+.sidebar { border-left: 1px solid #d9dfd6; }
+.selection { padding: 28px; min-height: 230px; border-bottom: 1px solid #e1e5db; }
+.selection .eyebrow { margin: 0 0 16px; color: var(--green); }
+.selection h2 { margin: 0; font-family: Georgia, serif; font-size: 30px; font-weight: 400; }
+#selection-japanese { font-size: 23px; color: var(--green); margin: 10px 0; }
+#selection-note { font-size: 13px; line-height: 1.6; color: var(--muted); margin-bottom: 0; }
+.directory { padding: 24px 20px; }
+label { display: block; font-size: 13px; font-weight: 650; margin-bottom: 10px; }
+input { width: 100%; border: 1px solid #cbd5c8; border-radius: 8px; background: white; padding: 12px; font: inherit; font-size: 14px; color: var(--ink); }
+#result-count { font-size: 11px; color: var(--muted); margin: 10px 0; }
+#prefecture-list { max-height: 310px; overflow-y: auto; scrollbar-width: thin; }
+.region-title { font-size: 10px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; margin: 18px 8px 6px; }
+.prefecture-button { width: 100%; display: flex; justify-content: space-between; gap: 8px; text-align: left; border: 0; border-radius: 6px; background: none; color: var(--ink); font: inherit; font-size: 13px; cursor: pointer; padding: 12px 8px; min-height: 44px; }
+.prefecture-button span:last-child { color: var(--muted); font-size: 12px; }
+.prefecture-button:hover { background: #edf1e9; }
+.prefecture-button[aria-pressed="true"] { background: #dce9d9; font-weight: 650; }
+:focus-visible { outline: 3px solid #a66b22; outline-offset: 3px; }
+footer { display: flex; justify-content: space-between; gap: 24px; font-size: 10px; line-height: 1.8; color: var(--muted); margin-top: 22px; }
+footer span:last-child { max-width: 530px; text-align: right; }
+@media (max-width: 780px) {
+  .page { padding: 24px 18px; }
+  .explorer { grid-template-columns: 1fr; }
+  .map-panel { padding: 18px; }
+  .sidebar { border-left: 0; border-top: 1px solid #d9dfd6; }
+  .selection { min-height: 0; padding: 22px; }
+  .directory { padding: 22px; }
+  #prefecture-list { max-height: 280px; }
+  footer { flex-direction: column; gap: 8px; }
+  footer span:last-child { text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) { #map .prefecture { transition: none; } }

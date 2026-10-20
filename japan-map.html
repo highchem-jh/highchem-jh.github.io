@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Japan's 47 prefectures on an interactive map.">
+  <title>Explore Japan · Prefecture map</title>
+  <link rel="stylesheet" href="assets/japan-map/map.css">
+  <script src="assets/japan-map/map.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <a class="back" href="./">← Back to the blog</a>
+      <p class="eyebrow">日本を旅する · EXPLORE JAPAN</p>
+      <h1>A country of <em>47 stories.</em></h1>
+      <p class="intro">Explore Japan, one prefecture at a time. Select a place on the map or find it in the list.</p>
+    </header>
+    <div class="explorer">
+      <section class="map-panel" aria-label="Interactive map of Japan">
+        <div class="map-heading"><span>JAPAN / 日本</span><span>47 PREFECTURES</span></div>
+        <div id="map" aria-busy="true"><p class="loading">Loading the map…</p></div>
+        <p class="map-hint">Select a prefecture to discover its name.</p>
+      </section>
+      <aside class="sidebar">
+        <section class="selection" aria-live="polite" aria-atomic="true">
+          <p class="eyebrow" id="selection-region">YOUR NEXT DISCOVERY</p>
+          <h2 id="selection-name">Choose a prefecture</h2>
+          <p id="selection-japanese" lang="ja">日本</p>
+          <p id="selection-note">Every place has a story. Start exploring the map.</p>
+        </section>
+        <section class="directory" aria-label="Find a prefecture">
+          <label for="search">Find a prefecture</label>
+          <input id="search" type="search" placeholder="Try Kyoto or 京都" autocomplete="off">
+          <p id="result-count" role="status"></p>
+          <div id="prefecture-list"></div>
+        </section>
+      </aside>
+    </div>
+    <noscript><p>Enable JavaScript to select prefectures and search the list.</p><img src="assets/japan-map/japan.svg" alt="Map of Japan's prefectures" width="600" style="max-width:100%;height:auto"></noscript>
+    <footer>
+      <span>Made for curious explorers.</span>
+      <span>Map: <a href="https://github.com/geolonia/japanese-prefectures">Geolonia</a>,
+      based on <a href="https://ja.wikipedia.org/wiki/File:日本地図.svg">Wikipedia</a> ·
+      <a href="assets/japan-map/LICENSE-GFDL.txt">GFDL</a>.
+      Some remote islands are omitted.</span>
+    </footer>
+  </main>
+</body>
+</html>
