@@ -1,6 +1,6 @@
-:root { color-scheme: light; --ink:#253b38; --muted:#66736d; --green:#285c4d; --border:#d9dfd5; }
+@import url("../design-tokens.css");
 * { box-sizing:border-box; }
-body { background:#f6f5ef; color:var(--ink); font:15px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; margin:0; }
+body { background:var(--paper); color:var(--ink); font:15px/1.6 var(--font-body); margin:0; }
 main { max-width:1260px; margin:auto; padding:30px 40px 40px; }
 a { color:var(--green); text-underline-offset:4px; }
 nav { display:flex; justify-content:space-between; gap:20px; font-size:13px; }
@@ -50,6 +50,10 @@ summary { cursor:pointer; font-size:13px; font-weight:650; }
 .actions { display:flex; flex-direction:column; gap:8px; flex-shrink:0; }
 .muted,footer { color:var(--muted); font-size:12px; }
 footer { margin-top:20px; max-width:850px; }
+.author-preference { margin-top:24px; padding:18px; border:1px solid var(--border); border-radius:8px; }
+.author-preference label { display:flex; align-items:center; gap:10px; }
+.author-preference input { width:18px; height:18px; flex-shrink:0; }
+.author-preference p { color:var(--muted); font-size:12px; margin:8px 0 0; }
 .message,.warnings { background:#fff1d5; border:1px solid #e4c88e; border-radius:8px; padding:12px 16px; font-size:13px; }
 .warnings { margin-top:18px; }
 .warnings p { margin:4px 0; }

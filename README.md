@@ -25,6 +25,16 @@ Run `node --test tests/publisher.test.cjs`.
 No npm install is needed; browser dependencies are vendored.
 The regular GitHub Pages deployment builds Jekyll.
 
+## Design and author navigation
+
+The blog, articles, and guide use the shared `_layouts` and `assets/site.css`.
+The map and editor also import `assets/design-tokens.css`. See `DESIGN.md` and
+`style-kit/example.html` for instructions on reusing the style.
+
+Publishing shortcuts are hidden by default. Enable the browser preference at
+the bottom of `/write.html` to show them on the homepage on that device.
+This is not authentication: GitHub still enforces permission to save posts.
+
 ## Browser dependencies
 
 - js-yaml 5.5.0 (`assets/publisher/vendor/yaml.min.js`)

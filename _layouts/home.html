@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<section class="hero">
+  <p class="eyebrow">NOTES, IDEAS & DISCOVERIES</p>
+  <h1>A little curiosity.<br><em>A world to explore.</em></h1>
+  <div class="intro">{{ content }}</div>
+  <div class="topic-list" aria-label="Topics">
+    <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Snowflake</span><span class="tag">AWS</span><span class="tag">Generative AI</span>
+  </div>
+</section>
+<section class="feature-card" aria-labelledby="japan-title">
+  <div>
+    <span class="eyebrow">A JOURNEY THROUGH JAPAN · 日本</span>
+    <h2 id="japan-title">47 prefectures.<br>Countless discoveries.</h2>
+    <p>Find your way around Japan, one prefecture at a time.</p>
+    <a class="button" href="{{ '/japan-map.html' | relative_url }}">Explore the map →</a>
+  </div>
+  <div class="feature-visual">
+    <img class="feature-map" src="{{ '/assets/japan-map/japan.svg' | relative_url }}" alt="" width="220" height="220">
+    <small class="map-credit">Map: <a href="https://github.com/geolonia/japanese-prefectures">Geolonia</a> · <a href="{{ '/assets/japan-map/LICENSE-GFDL.txt' | relative_url }}">GFDL</a></small>
+  </div>
+</section>
+<section class="posts-section" aria-labelledby="posts-title">
+  <div class="section-heading"><h2 id="posts-title">Latest notes</h2><span>THOUGHTS ALONG THE WAY</span></div>
+  {% if site.posts.size > 0 %}
+  <div class="post-grid">
+    {% for post in site.posts %}
+    <article class="post-card">
+      <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+      {% if site.show_excerpts %}<div class="post-excerpt">{{ post.excerpt }}</div>{% endif %}
+      <a href="{{ post.url | relative_url }}">Read the note →</a>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty-state">New notes will appear here. In the meantime, take a look around Japan.</p>
+  {% endif %}
+</section>

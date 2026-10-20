@@ -15,3 +15,5 @@ exclude:
   - README.md
   - OBSIDIAN-SETUP.md
   - node_modules
+  - DESIGN.md
+  - style-kit

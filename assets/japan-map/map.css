@@ -1,6 +1,6 @@
-:root { color-scheme: light; --ink: #233b39; --muted: #62716a; --green: #285c4d; --paper: #f6f5ef; }
+@import url("../design-tokens.css");
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); }
 .page { max-width: 1280px; margin: auto; padding: 32px 48px; }
 a { color: var(--green); text-underline-offset: 4px; }
 .back { font-size: 13px; }

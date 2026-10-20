@@ -9,6 +9,19 @@ and all finish with a commit to the `main` branch of
 [highchem-jh.github.io](https://github.com/highchem-jh/highchem-jh.github.io).
 GitHub Pages then rebuilds the site. New published posts appear on the homepage.
 
+## Your author shortcuts
+
+The public homepage does not show publishing links. Bookmark
+[the editor]({{ '/write.html' | relative_url }}) to return to it directly.
+At the bottom of that page, enable **Show author shortcuts on the homepage in
+this browser** if you want quick links on your own computer. Use **Hide
+shortcuts** on the homepage to turn them off again.
+
+This preference is stored only in that browser. It does not verify your
+identity or make the editor private. GitHub checks publishing permissions
+when you save a post. Clearing browser data or using another browser resets
+the preference.
+
 ## 1. Write on the website
 
 1. Open the [post editor]({{ '/write.html' | relative_url }}).

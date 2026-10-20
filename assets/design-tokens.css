@@ -1,0 +1,16 @@
+/* Shared visual language. Copy this file and site.css into another website. */
+:root {
+  color-scheme: light;
+  --paper: #f6f5ef;
+  --surface: #fffef9;
+  --tint: #eaf0e9;
+  --ink: #253b38;
+  --muted: #66736d;
+  --green: #285c4d;
+  --border: #d9dfd5;
+  --focus: #a66b22;
+  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-heading: Georgia, "Times New Roman", serif;
+  --radius: 16px;
+  --page-width: 1184px;
+}

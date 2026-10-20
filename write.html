@@ -10,6 +10,7 @@
   <script src="assets/publisher/vendor/markdown-it.min.js" defer></script>
   <script src="assets/publisher/post-core.js" defer></script>
   <script src="assets/publisher/editor.js" defer></script>
+  <script src="assets/author-shortcuts.js" defer></script>
 </head>
 <body>
   <main>
@@ -50,6 +51,11 @@
       </section>
       <p id="validation" role="status" class="muted">Add a title and some text to prepare your post.</p>
     </form>
+    <section class="author-preference" aria-label="Author navigation">
+      <label><input id="author-shortcuts-toggle" type="checkbox"> Show author shortcuts on the homepage in this browser</label>
+      <p>Leave this off on shared computers. This is a navigation preference; publishing still requires GitHub permission.</p>
+      <p id="author-shortcuts-status" role="status">You can always return directly to this editor at /write.html.</p>
+    </section>
     <footer>Drafts are saved locally in this browser. The repository is public: files committed to GitHub are readable there, even when kept off the website.</footer>
   </main>
 </body>
