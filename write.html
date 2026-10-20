@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Write a post · My Personal Blog</title>
+  <link rel="stylesheet" href="assets/publisher/editor.css">
+  <script src="assets/publisher/vendor/yaml.min.js" defer></script>
+  <script src="assets/publisher/vendor/markdown-it.min.js" defer></script>
+  <script src="assets/publisher/post-core.js" defer></script>
+  <script src="assets/publisher/editor.js" defer></script>
+</head>
+<body>
+  <main>
+    <nav><a href="./">← Back to the blog</a><a href="publishing/">Publishing guide & Obsidian</a></nav>
+    <header><p class="eyebrow">A SPACE FOR YOUR IDEAS</p><h1>Write something worth sharing.</h1>
+      <p>Start here or import a Markdown file. Review your post, then finish saving it in your GitHub account.</p></header>
+    <noscript><p>This editor needs JavaScript. You can also <a href="https://github.com/highchem-jh/highchem-jh.github.io/upload/main/_posts">upload a prepared Markdown post directly on GitHub</a>.</p></noscript>
+    <div class="toolbar">
+      <label class="button secondary import">Import .md file<input id="import-file" type="file" accept=".md,.markdown,text/markdown,text/plain"></label>
+      <button id="new-post" class="secondary" type="button">New post</button>
+      <span id="draft-status" role="status">Draft stays in this browser.</span>
+    </div>
+    <p id="message" role="status" class="message" hidden></p>
+    <form id="editor" novalidate>
+      <section class="metadata" aria-label="Post details">
+        <div class="wide"><label for="title">Post title</label><input id="title" required maxlength="200" placeholder="What would you like to share?"></div>
+        <div><label for="date">Post date <span>(Japan time)</span></label><input id="date" type="date" required></div>
+        <div><label for="slug">Filename name</label><input id="slug" required placeholder="my-first-post"><small>Letters, numbers, and hyphens. Japanese names also work.</small></div>
+        <div><label for="tags">Tags <span>(comma separated)</span></label><input id="tags" placeholder="Python, travel"></div>
+        <div><label for="categories">Categories <span>(comma separated)</span></label><input id="categories" placeholder="Notes"></div>
+        <div><label for="visibility">Post visibility</label><select id="visibility"><option value="true">Publish on the website</option><option value="false">Keep off the website</option></select></div>
+      </section>
+      <p id="metadata-note" class="muted" hidden></p>
+      <div class="workspace">
+        <section class="writing"><div class="panel-heading"><label for="body">Markdown</label><span id="word-count">0 words</span></div>
+          <textarea id="body" spellcheck="true" required placeholder="Start writing…&#10;&#10;## A heading&#10;&#10;Add **bold text**, links, images, and code blocks."></textarea></section>
+        <section class="preview-panel" aria-label="Post preview"><div class="panel-heading"><span>Preview</span><small>Final theme styling may differ.</small></div>
+          <article id="preview"><p>Your preview will appear here.</p></article></section>
+      </div>
+      <div id="warnings" class="warnings" hidden></div>
+      <details><summary>Prepared Markdown file</summary><p id="filename"></p><pre id="source"></pre></details>
+      <section class="publish-panel">
+        <div><h2>Ready to share?</h2><p id="handoff-help">GitHub opens in a new tab. Sign in, review the file, and choose “Commit changes” to save it to main.</p>
+          <p class="muted">Only repository collaborators can save. A commit to main triggers the website rebuild.</p></div>
+        <div class="actions"><a id="continue" class="button primary" target="_blank" rel="noopener noreferrer" aria-disabled="true">Continue on GitHub</a>
+          <button id="download" type="button" class="secondary" disabled>Download .md</button>
+          <button id="copy" type="button" class="secondary" disabled>Copy Markdown</button></div>
+      </section>
+      <p id="validation" role="status" class="muted">Add a title and some text to prepare your post.</p>
+    </form>
+    <footer>Drafts are saved locally in this browser. The repository is public: files committed to GitHub are readable there, even when kept off the website.</footer>
+  </main>
+</body>
+</html>

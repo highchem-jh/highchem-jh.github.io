@@ -1,3 +1,17 @@
 title: My Personal Blog
 description: Notes
 theme: minima
+timezone: Asia/Tokyo
+show_excerpts: true
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+exclude:
+  - tools
+  - tests
+  - README.md
+  - OBSIDIAN-SETUP.md
+  - node_modules
